@@ -1,5 +1,6 @@
 import React from 'react';
-import { FiArrowRight } from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 import '../styles/pages/landing.css';
 
@@ -9,7 +10,7 @@ const Landing = () => {
   return (
     <div id="page-landing">
       <div className="content-wrapper">
-        <img src={logoImg} alt="logotipo da aplicação"/>
+        <img src={logoImg} alt="logotipo da aplicação" />
 
         <main>
           <h1>Leve felicidade para o mundo</h1>
@@ -21,12 +22,12 @@ const Landing = () => {
           <span>Santa Catarina</span>
         </div>
 
-        <a href="#" className="enter-app">
-          <FiArrowRight size={26} color="rgba(0, 0, 0, 1)"/>
-        </a>
+        <Link to="/app" className="enter-app">
+          <FiArrowRight size={26} color="rgba(0, 0, 0, 1)" />
+        </Link>
       </div>
     </div>
   );
-}
+};
 
 export default Landing;
